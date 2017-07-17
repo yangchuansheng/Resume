@@ -69,14 +69,16 @@
                             <p>数据库高可用方面，MySQL 使用 MHA 来实现高可用，MHA 在监控到 master 节点故障时，会提升其中拥有的最新数据的 slave 节点成为新的 master 节点；MongoDB 通过副本集提供其服务的高可用及主从复制，然而当服务发生故障，从服务切换到主服务时，相应的 IP 或者端口会发生变化，为了保证 MongoDB 对外提供的服务接口不变，引入了LVS</p>
                             <p>应用的元数据存储在 ETCD 上，ETCD 采用集群以保证平台的高可用；整个 OPS 平台的网络采用 openvswitch 的 vxlan 模式，通过 openflow 协议来处理数据流</p>
                             <p>应用的代码 push 到本地的 git 仓库中，通过 openshift 的 imagestream 和 buildconfig 来自动构建镜像并启动容器，从而实现应用的自动部署和持续交付</p>    
+                            <img src="http://o7z41ciog.bkt.clouddn.com/QQ%E5%9B%BE%E7%89%8720170717100105.png" data-action="zoom" width="400px">
                         </li>
-
                         <li>
                             <div class="circle"></div>
-                            <h4>商业项目</h4>
-                            <p>负责部分丁香园<a href="http://www.dxy.cn/college/" target="_blank">商业项目</a>的开发维护，商业项目作为丁香园最大的营收来源，为药企提供营销、数据服务和信息技术服务</p>
-                            <p>商业项目使用 webpack 和 postcss 构建，兼容 IE8</p>
+                            <h4>云坤IT治理平台项目</h4>
+                            <p>负责IT治理平台的部署、维护和更新工作，项目采用 WebApp 的形式，使用 kubernetes 部署，前端使用 haproxy ingress controller 对外暴露服务，由 haproxy 进行路由转发</p>
+                            <p>整个平台分为用户认证系统、服务管理系统、应用管理系统和数据治理系统，用户认证系统负责用户管理和授权登录；服务管理系统负责服务订阅、控制和管理；应用管理系统负责应用订阅和管理；数据治理系统负责授权认证、模型管理和数据分析</p>
+                            <p>整个项目的代码存放在 nfs 中，通过 nfs 网络文件系统挂载到各个pod中</p>
                         </li>
+
                     </ul>
                     <h3>个人经历</h3>
                     <ul class="exp">
