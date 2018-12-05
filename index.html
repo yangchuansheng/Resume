@@ -19,6 +19,118 @@
         ga('send', 'pageview');
 
     </script>
+    <style>
+    .label-keyword {
+      display: inline-block;
+      background: #e8f4ff;
+      color: black;
+      font-size: 0.9em;
+      padding: 5px;
+      border: 1px solid #357ebd;
+      border-radius: 5px;
+      margin-top: 2px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .notes {
+      font-size: 10px;
+      display: block;
+      font-weight: normal;
+      text-transform: uppercase;
+    }
+
+    .card-skills {
+        position: relative;
+    }
+    .card-nested {
+        min-height: 0;
+        margin-bottom: 10px;
+        border-width: 1px 0 0 0;
+    }
+    .card {
+        background: #FFF;
+        border-radius: 3px;
+        padding: 10px;
+    }
+
+    .skill-level {
+      border-radius: 3px;
+      position: absolute;
+      top: 10px;
+      bottom: 10px;
+      left: 0;
+      width: 10px;
+      box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.5);
+    }
+    .skill-level .skill-progress {
+      position: absolute;
+      border-radius: 3px;
+      bottom: 0;
+      width: 100%;
+      -webkit-transition: height 1s ease;
+    }
+    .skill-level .skill-progress.beginner {
+      height: 50%;
+      background: #e74c3c;
+    }
+    .skill-level .skill-progress.intermediate {
+      height: 70%;
+      background: #f1c40f;
+    }
+    .skill-level .skill-progress.advanced {
+      height: 80%;
+      background: #428bca;
+    }
+    .skill-level .skill-progress.master {
+      height: 95%;
+      background: #5cb85c;
+    }
+    .skill-info {
+      margin-left: 10px;
+    }
+    @media (max-width: 480px) {
+      .skill-info {
+        margin-left: 20px;
+      }
+    }
+    .skill-info > strong {
+      font-weight: 400;
+      font-size: 24px;
+      color: #1d1d1d;
+      line-height: 24px;
+    }
+
+    .list-unstyled {
+      padding-left: 0;
+      list-style: none;
+    }
+
+    .card-skills {
+      position: relative;
+    }
+
+    .space-top {
+        margin-top: 5px;
+    }
+
+    #container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    #elevator-pitch {
+      text-align: center;
+      font-size: 24px;
+      color: #BFC1C3;
+      text-transform: uppercase;
+      font-weight: normal;
+    }
+
+    .res-label {
+      font-style: italic;
+    }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -126,6 +238,120 @@
                 </li>
                 <li>
                     <dt><i class="icon-bookmark"></i>Skill. 技能清单</dt>
+                    <h3>总览</h3>
+                    <ul class="list-unstyled">
+                        <li class="card card-nested card-skills">
+                            <div class="skill-level" rel="tooltip" title="advanced" data-placement="left">
+                                <div class="skill-progress advanced"></div>
+                            </div>
+                            <div class="skill-info"> <strong>Istio</strong>
+                                <div class="space-top labels">
+                                    <div class="label label-keyword"> <span class="kw">Traffic Manament</span>
+                 <span class="notes">熟悉</span>
+                                    </div>
+                                    <div class="label label-keyword"> <span class="kw">Security</span>
+                 <span class="notes">了解</span>
+                                    </div>
+                                    <div class="label label-keyword"> <span class="kw">xDS</span>
+                 <span class="notes">熟悉</span>
+                                    </div>
+                                    <div class="label label-keyword"> <span class="kw">Envoy</span>
+                 <span class="notes">熟悉</span>
+                                    </div>
+                                    <div class="label label-keyword"> <span class="kw">gateway</span>
+                 <span class="notes">熟悉</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="list-unstyled">
+                        <li class="card card-nested card-skills">
+                            <div class="skill-level" rel="tooltip" title="advanced" data-placement="left">
+                                <div class="skill-progress master"></div>
+                            </div>
+                            <div class="skill-info"> <strong>Kubernetes</strong>
+                                <div class="space-top labels">
+                                    <div class="label label-keyword"> <span class="kw">设计原则</span>
+                 <span class="notes">熟悉</span>
+                                    </div>
+                                    <div class="label label-keyword"> <span class="kw">资源模型</span>
+                 <span class="notes">熟悉</span>
+                                    </div>
+                                    <div class="label label-keyword"> <span class="kw">QoS</span>
+                 <span class="notes">熟悉</span>
+                                    </div>
+                                    <div class="label label-keyword"> <span class="kw">弹性伸缩</span>
+                 <span class="notes">熟悉</span>
+                                    </div>
+                                    <div class="label label-keyword"> <span class="kw">Calico</span>
+                 <span class="notes">熟悉</span>
+                                    </div>
+                                    <div class="label label-keyword"> <span class="kw">Federation</span>
+                 <span class="notes">熟悉</span>
+                                    </div>
+                                    <div class="label label-keyword"> <span class="kw">Cgroup</span>
+                 <span class="notes">熟悉</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="list-unstyled">
+                        <li class="card card-nested card-skills">
+                            <div class="skill-level" rel="tooltip" title="advanced" data-placement="left">
+                                <div class="skill-progress advanced"></div>
+                            </div>
+                            <div class="skill-info"> <strong>Linux</strong>
+                                <div class="space-top labels">
+                                    <div class="label label-keyword"> <span class="kw">shell</span>
+                 <span class="notes">熟悉</span>
+                                    </div>
+                                    <div class="label label-keyword"> <span class="kw">iptables</span>
+                 <span class="notes">熟悉</span>
+                                    </div>
+                                    <div class="label label-keyword"> <span class="kw">sed & awk</span>
+                 <span class="notes">了解</span>
+                                    </div>
+                                    <div class="label label-keyword"> <span class="kw">CPU</span>
+                 <span class="notes">熟悉</span>
+                                    </div>
+                                    <div class="label label-keyword"> <span class="kw">进程</span>
+                 <span class="notes">了解</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="list-unstyled">
+                        <li class="card card-nested card-skills">
+                            <div class="skill-level" rel="tooltip" title="advanced" data-placement="left">
+                                <div class="skill-progress intermediate"></div>
+                            </div>
+                            <div class="skill-info"> <strong>网络</strong>
+                                <div class="space-top labels">
+                                    <div class="label label-keyword"> <span class="kw">TCP/IP</span>
+                 <span class="notes">了解</span>
+                                    </div>
+                                    <div class="label label-keyword"> <span class="kw">network namespace</span>
+                 <span class="notes">熟悉</span>
+                                    </div>
+                                    <div class="label label-keyword"> <span class="kw">Container Network Interface</span>
+                 <span class="notes">了解</span>
+                                    </div>
+                                    <div class="label label-keyword"> <span class="kw">icmp</span>
+                 <span class="notes">熟悉</span>
+                                    </div>
+                                    <div class="label label-keyword"> <span class="kw">dhcp</span>
+                 <span class="notes">熟悉</span>
+                                    </div>
+                                    <div class="label label-keyword"> <span class="kw">vxlan</span>
+                 <span class="notes">了解</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
                     <h3>linux 相关</h3>
                     <ul class="exp">
                         <li>
